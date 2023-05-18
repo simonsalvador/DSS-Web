@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/consult-form.css" />
+
+    <title>Consulta</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="hero">      
+        <h1>A la brevedad nos pondremos en contacto</h1>
+
+        <p><a href="/index.html">¡Gracias!</a></p>
+      </div>
+
+      <div class="section-form">
+        <form id="form" action="#">
+          <input
+            type="text"
+            name="nombre"
+            id="f_name"
+            placeholder="Nombre"
+            required
+          />
+
+          <input
+            type="text"
+            name="apellido"
+            id="l_name"
+            placeholder="Apellido"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            id="email-field"
+            placeholder="Email"
+            required
+            />
+            
+            
+            <input type="text" 
+            id="captcha" 
+            name="captcha" readonly
+            />
+            
+            <input
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Ingrese el código"
+            required
+            />
+            <div class="msg-captcha"></div>
+
+          <button class="enviar">Enviar</button>
+
+        </form>
+      </div>
+    </section>
+
+    <footer> 
+      <h6> 2023 - &#169 Copyright - DSS - Todos los derechos reservados</h6>
+   </footer>
+
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

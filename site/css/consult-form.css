@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fraunces", serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(19, 19, 19, 1) 20%,
+    rgba(37, 37, 37, 1) 100%
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color:#4ac1b6;
+   text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+/* HEADER */
+.header {
+  margin: auto;
+  display: flex;
+  width: 1105px;
+}
+
+.hero {
+  color: #4ac1b6;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-right: 50px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 54px;
+  padding-bottom: 30px;
+}
+
+.hero p {
+  padding-bottom: 60px;
+}
+
+/* FORM */
+form {
+  background-color: #0c4964;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: rgba(98, 151, 241, 0.25) 0px 8px 1px,
+    rgba(33, 95, 202, 0.13) 0px 0px 1px 1px;
+  display: block;
+  position: relative;
+}
+
+form input {
+  width: 100%;
+  height: 55px;
+  padding-left: 25px;
+  margin-bottom: 16px;
+  border: 1px solid rgb(228, 215, 215);
+  border-radius: 5px;
+}
+
+form input::placeholder {
+  font-weight: 600;
+}
+
+#captcha {
+  background: #727d8d;
+  font-size: 1em;
+  width: 50%;
+  margin: 5% 25% 0% 25%;
+  text-align: center;
+  padding: 0px;
+  border: 1px solid #727d8d;
+  border-radius: 5px;
+}
+
+#text {
+  width: 50%;
+  margin: 0% 25% 0% 25%;
+}
+
+.msg-captcha {
+  text-align: center;
+  width: 50%;
+  margin: 2% 25% 5% 25%;
+}
+
+.enviar {
+  background-color:  hsl(154, 59%, 51%);;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(53, 139, 79, 0.712) 0px 5px 1px,
+    rgba(53, 139, 79, 0.712) 0px 0px 1px 1px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.enviar:hover {
+  background-color: rgba(53, 139, 79, 0.712);
+}
+
+/* FOOTER */
+footer {
+  color: #727d8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
-
 * {
   padding: 0;
   margin: 0;
@@ -25,9 +24,9 @@ body {
   align-items: center;
 }
 
-a{
-  color:#4ac1b6;
-   text-decoration: none;
+a {
+  color: #4ac1b6;
+  text-decoration: none;
 }
 a:hover {
   color: white;
@@ -65,6 +64,7 @@ a:hover {
 form {
   background-color: #0c4964;
   padding: 25px;
+  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: rgba(98, 151, 241, 0.25) 0px 8px 1px,
     rgba(33, 95, 202, 0.13) 0px 0px 1px 1px;
@@ -108,7 +108,7 @@ form input::placeholder {
 }
 
 .enviar {
-  background-color:  hsl(154, 59%, 51%);;
+  background-color: hsl(154, 59%, 51%);
   color: white;
   width: 100%;
   font-size: 16px;
@@ -127,11 +127,102 @@ form input::placeholder {
   background-color: rgba(53, 139, 79, 0.712);
 }
 
+/*SECTION USERDATA*/
+.flexbox-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-userdata {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.container-userdata {
+  width: 75%;
+  background: #0c4964;
+  box-shadow: rgba(98, 151, 241, 0.25) 0px 8px 1px,
+    rgba(33, 95, 202, 0.13) 0px 0px 1px 1px;
+}
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+  background-color: #0c4964;
+  color: white;
+  padding: 10px;
+  border: 1px solid rgba(98, 151, 241, 0.25);
+  font-family: "Fraunces", serif;
+}
+
+td,
+tr {
+  padding: 30px;
+  text-align: center;
+  border: 3px solid rgba(33, 95, 202, 0.13);
+  font-family: "Barlow", serif;
+  font-size: 1.1em;
+}
+
 /* FOOTER */
 footer {
   color: #727d8d;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+
+  padding: 30px 0px 20px 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 20px;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+  }
+
+  .hero {
+    padding-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input {
+    height: 40px;
+  }
+
+  #captcha,
+  #text,
+  .msg-captcha {
+    width: 50%;
+    margin: 0% 25% 0% 25%;
+  }
+
+  .enviar {
+    margin-top: 15px;
+  }
+
+  footer {
+    padding-top: 20px;
+  }
 }

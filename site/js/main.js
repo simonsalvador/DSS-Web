@@ -1,10 +1,17 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
   const dataForm = document.querySelector("#data-form");
-  const submitBtn = document.querySelector("#submit-btn");
-  const dataTable = document.querySelector("#data-table tbody");
   const captchaInput = document.querySelector("#captcha-input");
-  let data = [];
+  let data = [{
+    firstName: "Juan",
+    lastName: "Perez",
+    email: "juanperez@gmail.com"
+  },
+  {
+    firstName: "Roberto",
+    lastName: "Suarez",
+    email: "RobertoSuarez@gmail.com"
+  },];
 
   const msgCaptcha = document.querySelector(".msg-captcha");
 
@@ -18,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstName = document.querySelector("#first-name").value;
     const lastName = document.querySelector("#last-name").value;
     const email = document.querySelector("#email").value;
-    const captchaValue = captcha.value;
+    const captchaValue = document.querySelector("#captcha").value;
     const captchaInputValue = captchaInput.value;
 
     if (captchaValue !== captchaInputValue) {
@@ -33,10 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
         email: email,
       };
       data.push(newData);
-      addRowToTable(newData);
-
+      saveDataToLocalStorage(data);
+  
       dataForm.reset();
       setCaptcha();
+      openTablePage();
+
     }
   });
 
@@ -53,29 +62,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //  valor del captcha
   function setCaptcha() {
-    let captchaValue = generateCaptcha();
-    captcha.value = captchaValue;
+    const captcha = generateCaptcha();
+    document.querySelector("#captcha").value = captcha;
   }
 
-  //  agregar una fila a la tabla
+  //  agregar fila a la tabla
   function addRowToTable(data) {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-         <td>${data.firstName}</td>
-         <td>${data.lastName}</td>
-         <td>${data.email}</td>
-         <td><button class="delete-btn">Eliminar</button></td>
-     `;
-    dataTable.appendChild(row);
+    const newRow = document.createElement("tr");
+    newRow.innerHTML = `<td>${data.firstName}</td>
+                        <td>${data.lastName}</td>
+                        <td>${data.email}</td>`;
+    dataTable.appendChild(newRow);
   }
 
-  // evento "Eliminar"
-  dataTable.addEventListener("click", function (event) {
-    if (event.target.classList.contains("delete-btn")) {
-      const row = event.target.closest("tr");
-      const index = Array.from(dataTable.children).indexOf(row);
-      data.splice(index, 1);
-      row.remove();
-    }
-  });
+  // Almacenar datos en localStorage
+  function saveDataToLocalStorage(data) {
+    localStorage.setItem("formData", JSON.stringify(data));
+  }
+
+  function openTablePage() {
+    window.open("table.html", "_blank");
+  }
+
 });
+

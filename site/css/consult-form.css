@@ -172,6 +172,10 @@ tr {
   font-size: 1.1em;
 }
 
+.resaltar {
+  background-color: hsl(154, 59%, 51%);
+}
+
 /* FOOTER */
 footer {
   color: #727d8d;

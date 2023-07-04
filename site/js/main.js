@@ -2,17 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dataForm = document.querySelector("#data-form");
   const captchaInput = document.querySelector("#captcha-input");
-  let data = [{
-    firstName: "Juan",
-    lastName: "Perez",
-    email: "juanperez@gmail.com"
-  },
-  {
-    firstName: "Roberto",
-    lastName: "Suarez",
-    email: "RobertoSuarez@gmail.com"
-  },];
-
   const msgCaptcha = document.querySelector(".msg-captcha");
 
   //  captcha inicial

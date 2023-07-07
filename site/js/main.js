@@ -55,14 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#captcha").value = captcha;
   }
 
-  //  agregar fila a la tabla
-  function addRowToTable(data) {
-    const newRow = document.createElement("tr");
-    newRow.innerHTML = `<td>${data.firstName}</td>
-                        <td>${data.lastName}</td>
-                        <td>${data.email}</td>`;
-    dataTable.appendChild(newRow);
-  }
 
   // Almacenar datos en localStorage
   function saveDataToLocalStorage(data) {
